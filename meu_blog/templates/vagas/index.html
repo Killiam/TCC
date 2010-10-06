@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %} Lista de vagas {% endblock %}
+
+{% block content %}
+<h1>Lista de vagas</h1>
+<ul>
+{% for vaga in lista %}
+<li><a href="{{ vaga.id }}">{{ vaga.titulo }}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}
+

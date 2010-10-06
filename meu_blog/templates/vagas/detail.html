@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %} Detalhes da vaga {% endblock %}
+
+{% block content %}
+<h1>Detalhes da vaga</h1>
+
+div class="job">
+<div class="title">
+{{ vaga.titulo }}
+-
+{{ vaga.local }}
+</div>
+<div class="posted">
+Postado em: {{ vaga.publicado|date:"d-M-Y" }}
+</div>
+<div class="description">
+{{ vaga.descricao }}
+</div>
+</div>
+<p> </p>
+<a href="http://127.0.0.1:8000/">Voltar</a>
+{% endblock %}
