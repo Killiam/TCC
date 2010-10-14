@@ -3,6 +3,29 @@ from django.template import RequestContext
 from django import forms
 from django.core.mail import send_mail
 
+class FormTeste(forms.Form):
+    nome  = forms.ChoiceField()
+    chave = forms.ChoiceField()
+
+def teste(request):
+    if request.method == 'POST':
+        form = FormTeste(request.POST)
+
+        if form.is_valid():
+            form.enviar()
+            mostrar = 'Teste efetuado com SUCESSO!'
+            
+    else:
+        form = FormTeste()
+
+    return render_to_response(
+        'teste.html',
+        locals(),
+        context_instance=RequestContext(request),
+        )
+
+
+
 class FormContato(forms.Form):
     nome = forms.CharField(max_length=50)
     email = forms.EmailField(required=False)
