@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block titulo %}Teste - {{ block.super }}{% endblock %}
+
+{% block h1 %}<center>Teste</center>{% endblock %}
+
+{% block conteudo %}
+{% if mostrar %}<h3>{{ mostrar }}</h3>{% endif %}
+
+Informe o Nome do Teste e a Chave :<br>
+<br>
+<form method="post">
+  <table>
+    {{ form }}
+
+    <tr>
+      <th>&nbsp;</th>
+      <td><br><input type="submit" value="Efetuar Teste"/></td>
+    </tr>
+  </table>
+</form>
+{% endblock conteudo %}
+
