@@ -39,8 +39,10 @@
     {% spaceless %}
     <ul>
      <li><a href="/">Pagina inicial</a></li>
+    <li><a href="{% url views.teste %}">Teste</a></li> 
      <li><a href="/sobre/">Sobre</a></li>
      <li><a href="{% url views.contato %}">Contato</a></li>
+ 
 
     </ul>
     {% endspaceless %}
