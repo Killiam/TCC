@@ -17,8 +17,7 @@ urlpatterns = patterns('',
     (r'^artigo/(?P<artigo_id>\d+)/$', 'blog.views.artigo'),
     (r'^contato/$', 'views.contato'),
     (r'^comments/', include('django.contrib.comments.urls')),
-    (r'^teta/$', 'vagas.views.index'),
-    (r'^/teste/1(?P<object_id>\d+)/$', 'vagas.views.detail'),
+    (r'^teste/$', 'views.teste'),
 
 )
 
